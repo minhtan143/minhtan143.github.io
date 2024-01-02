@@ -1,0 +1,56 @@
+<footer class="pt-4 pb-4 text-muted text-center d-print-none">
+  <div class="container">
+    <div class="my-3">
+      <div class="h4">Tan Pham</div>
+      <div class="footer-nav">
+        <nav role="navigation">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [href]="contact.facebook"
+                title="Facebook"
+                target="_blank"
+                ><fa-icon [icon]="faFacebook"></fa-icon
+                ><span class="menu-title sr-only">Facebook</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [href]="contact.gmail"
+                title="Gmail"
+                target="_blank"
+                ><fa-icon [icon]="faEnvelope"></fa-icon
+                ><span class="menu-title sr-only">Gmail</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [href]="contact.skype"
+                title="Skype"
+                target="_blank"
+                ><fa-icon [icon]="faSkype"></fa-icon
+                ><span class="menu-title sr-only">Skype</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [href]="contact.github"
+                title="Github"
+                target="_blank"
+                ><fa-icon [icon]="faGithub"></fa-icon
+                ><span class="menu-title sr-only">Github</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="text-small">
+      <div class="mb-1">Copyright &copy; {{ currentYear }}</div>
+    </div>
+  </div>
+</footer>
