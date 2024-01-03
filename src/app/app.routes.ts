@@ -5,5 +5,6 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeLayoutComponent,
+    title: 'Tan Pham - About me'
   },
 ];

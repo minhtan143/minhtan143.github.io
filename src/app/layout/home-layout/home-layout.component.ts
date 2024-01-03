@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
+import { ContactComponent } from '../../shared/components/contact/contact.component';
 
 @Component({
   selector: 'app-home-layout',
   standalone: true,
-  imports: [RouterOutlet, FooterComponent],
+  imports: [RouterOutlet, FooterComponent, ContactComponent],
   templateUrl: './home-layout.component.html',
-  styleUrl: './home-layout.component.scss'
+  styleUrl: './home-layout.component.scss',
 })
-export class HomeLayoutComponent {
-
-}
+export class HomeLayoutComponent {}
