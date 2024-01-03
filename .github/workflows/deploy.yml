@@ -26,11 +26,10 @@ jobs:
       run: |
         npm i
         npm run build
-        cp ./dist/browser/index.html ./dist/404.html
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./dist
+        path: ./dist/browser
 
   deploy:
     environment:
