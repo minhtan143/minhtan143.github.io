@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { NgParticlesService, NgxParticlesModule } from '@tsparticles/angular';
+import { MoveDirection, OutMode } from '@tsparticles/engine';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
-import { NgParticlesService, NgxParticlesModule } from '@tsparticles/angular';
-import { MoveDirection, OutMode } from '@tsparticles/engine';
-import { loadSlim } from '@tsparticles/slim';
+import { loadFull } from 'tsparticles';
 
 @Component({
   selector: 'app-root',
@@ -25,15 +25,7 @@ export class AppComponent implements OnInit {
   title = 'about-me';
 
   particlesOptions = {
-    fpsLimit: 120,
-    interactivity: {
-      events: {
-        onHover: {
-          enable: true,
-          mode: ['grab', 'attract'],
-        },
-      },
-    },
+    fpsLimit: 60,
     particles: {
       color: {
         value: '#0000ff',
@@ -66,7 +58,7 @@ export class AppComponent implements OnInit {
         value: 0.4,
       },
       size: {
-        value: { min: 0.6, max: 1 },
+        value: { min: 0.7, max: 1 },
       },
     },
     detectRetina: true,
@@ -76,7 +68,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.ngParticlesService.init(async (engine) => {
-      await loadSlim(engine, true);
+      await loadFull(engine);
     });
   }
 }
