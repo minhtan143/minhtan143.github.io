@@ -1,21 +1,10 @@
 .resume-container {
-  > .my-5 {
+  >.my-5 {
     margin: 0 !important;
   }
 }
 
-.cover {
-  height: 500px;
-
-  > img {
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: auto;
-  }
-}
-
 .mask {
-  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -24,12 +13,19 @@
   height: 100%;
   overflow: hidden;
   background-attachment: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(2px);
+
+  >img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: auto;
+  }
 }
 
 .bg-image {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;

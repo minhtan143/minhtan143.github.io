@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
         outModes: {
           default: OutMode.bounce,
         },
-        random: true,
+        random: false,
         speed: 1.5,
         straight: false,
       },

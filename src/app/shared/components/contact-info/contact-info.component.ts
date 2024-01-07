@@ -10,14 +10,14 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'app-contact-info',
   standalone: true,
   imports: [FontAwesomeModule],
   providers: [LocalDataService],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
+  templateUrl: './contact-info.component.html',
+  styleUrl: './contact-info.component.scss',
 })
-export class ContactComponent implements OnInit {
+export class ContactInfoComponent implements OnInit {
   contact: Contact = {} as Contact;
   faFacebook = faFacebook;
   faGithub = faGithub;
