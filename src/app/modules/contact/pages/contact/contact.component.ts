@@ -29,7 +29,7 @@ export class ContactComponent {
           content: about.skype,
         },
         {
-          title: 'My workplace',
+          title: 'Workplace',
           content: about.workplace,
         },
       ];
