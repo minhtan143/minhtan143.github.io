@@ -3,9 +3,11 @@ import { NgParticlesService, NgxParticlesModule } from '@tsparticles/angular';
 import { MoveDirection, OutMode } from '@tsparticles/engine';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Meta } from '@angular/platform-browser';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
 import { loadFull } from 'tsparticles';
+import { environment } from './../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +25,8 @@ import { loadFull } from 'tsparticles';
 })
 export class AppComponent implements OnInit {
   title = 'about-me';
+  descriptionMeta =
+    'I am passionate about developing high-quality software that is reliable and scalable. I am also a strong believer in the DevOps approach, which I believe can help organizations to improve the speed, efficiency, and quality of their software delivery.';
 
   particlesOptions = {
     fpsLimit: 60,
@@ -34,8 +38,8 @@ export class AppComponent implements OnInit {
         enable: true,
         color: '#008000',
         distance: 150,
-        opacity: 0.2,
-        width: 0.5,
+        opacity: 0.4,
+        width: 0.6,
       },
       move: {
         direction: MoveDirection.none,
@@ -43,8 +47,8 @@ export class AppComponent implements OnInit {
         outModes: {
           default: OutMode.bounce,
         },
-        random: false,
-        speed: 1,
+        random: true,
+        speed: 1.5,
         straight: false,
       },
       number: {
@@ -55,18 +59,43 @@ export class AppComponent implements OnInit {
         value: 100,
       },
       opacity: {
-        value: 0.4,
+        value: 0.6,
       },
       size: {
-        value: { min: 0.7, max: 1 },
+        value: { min: 1, max: 1.5 },
       },
     },
     detectRetina: true,
   };
 
-  constructor(private readonly ngParticlesService: NgParticlesService) {}
+  constructor(
+    private meta: Meta,
+    private readonly ngParticlesService: NgParticlesService
+  ) {}
 
   ngOnInit(): void {
+    this.meta.addTags([
+      { name: 'robots', content: 'index,follow' },
+      { name: 'description', content: this.descriptionMeta },
+      { property: 'og:url', content: environment.baseUrl },
+      {
+        property: 'og:title',
+        content: 'Tan Pham - .NET Developer and DevOps Engineer',
+      },
+      {
+        property: 'og:image',
+        content: `${environment.baseUrl}assets/images/avatar.jpg`,
+      },
+      { property: 'og:site_name', content: 'Tan Pham' },
+      {
+        property: 'og:keywords',
+        content: 'TP,Tan Pham,Phạm Văn Minh Tân,.NET Developer,DevOps Engineer',
+      },
+      { property: 'og:description', content: this.descriptionMeta },
+      { property: 'og:type', content: 'profile' },
+      { property: 'og:app_id', content: '369083645868629' },
+    ]);
+
     this.ngParticlesService.init(async (engine) => {
       await loadFull(engine);
     });
