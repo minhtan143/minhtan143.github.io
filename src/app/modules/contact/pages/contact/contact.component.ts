@@ -6,7 +6,6 @@ import { LocalDataService } from '../../../../data/services/local-data.service';
   selector: 'app-contact',
   standalone: true,
   imports: [CommonModule],
-  providers: [LocalDataService],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -16,7 +15,7 @@ export class ContactComponent {
   constructor(private localDataService: LocalDataService) {}
 
   ngOnInit(): void {
-    this.localDataService.getInformation().subscribe((about) => {
+    this.localDataService.Information.subscribe((about) => {
       this.contacts = [
         {
           title: 'Email',
