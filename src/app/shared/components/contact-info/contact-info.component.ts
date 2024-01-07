@@ -13,7 +13,6 @@ import { ContactModel } from '../../../data/models/information.model';
   selector: 'app-contact-info',
   standalone: true,
   imports: [FontAwesomeModule],
-  providers: [LocalDataService],
   templateUrl: './contact-info.component.html',
   styleUrl: './contact-info.component.scss',
 })
@@ -27,7 +26,7 @@ export class ContactInfoComponent implements OnInit {
   constructor(private localDataService: LocalDataService) {}
 
   ngOnInit(): void {
-    this.localDataService.getInformation().subscribe(({ contact }) => {
+    this.localDataService.Information.subscribe(({ contact }) => {
       this.contact = contact;
     });
   }

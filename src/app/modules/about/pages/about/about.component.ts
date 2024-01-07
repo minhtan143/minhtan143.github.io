@@ -6,7 +6,6 @@ import { LocalDataService } from '../../../../data/services/local-data.service';
   selector: 'app-about',
   standalone: true,
   imports: [CommonModule],
-  providers: [LocalDataService],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })
@@ -20,7 +19,7 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.currentYear = new Date().getFullYear();
 
-    this.localDataService.getInformation().subscribe((about) => {
+    this.localDataService.Information.subscribe((about) => {
       this.introduce = about.introduce;
 
       this.about = [
