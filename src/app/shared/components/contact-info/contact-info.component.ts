@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Contact } from '../../../data/models/contact';
+import { ContactModel } from '../../../data/models/contact.model';
 import { LocalDataService } from '../../../data/services/local-data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,7 @@ import {
   styleUrl: './contact-info.component.scss',
 })
 export class ContactInfoComponent implements OnInit {
-  contact: Contact = {} as Contact;
+  contact: ContactModel = {} as ContactModel;
   faFacebook = faFacebook;
   faGithub = faGithub;
   faEnvelope = faEnvelope;

@@ -1,4 +1,4 @@
-export interface Contact {
+export interface ContactModel {
   facebook: string;
   gmail: string;
   skype: string;

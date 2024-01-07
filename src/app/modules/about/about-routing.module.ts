@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: AboutComponent,
-    title: 'Tan Pham - About me',
+    title: 'Tan Pham - About',
   },
 ];
 

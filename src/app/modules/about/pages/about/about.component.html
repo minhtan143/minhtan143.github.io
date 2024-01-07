@@ -2,81 +2,25 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="h2 fw-light mb-4">About Me</h2>
-      <p>
-        Hi, I'm Tan Pham. I am a .NET developer and DevOps engineer, I have a
-        strong understanding of the .NET framework, including C#, ASP.NET, and
-        MVC. I am also proficient in DevOps concepts and practices, such as
-        continuous integration and continuous delivery (CI/CD), infrastructure
-        as code (IaC), and containerization.
-      </p>
-      <p>
-        Leveraging readily attainable opportunities, I efficiently optimize
-        real-time data structures for expedited delivery.
-      </p>
+      <div class="text-justify" [innerHTML]="introduce"></div>
     </div>
     <div class="col-md-5 offset-lg-1">
       <div class="row mt-2">
         <h2 class="h2 fw-light mb-4">Bio</h2>
-        <div class="col-sm-5">
-          <div class="pb-2 fw-bolder">
-            <i
-              class="far fa-calendar-alt pe-2 text-muted"
-              style="width: 24px; opacity: 0.85"
-            ></i>
-            Age
+        <ng-template ngFor let-info [ngForOf]="about">
+          <div class="col-sm-5">
+            <div class="pb-2 fw-bolder">
+              <i
+                class="far fa-calendar-alt pe-2 text-muted"
+                style="width: 24px; opacity: 0.85"
+              ></i>
+              {{ info.title }}
+            </div>
           </div>
-        </div>
-        <div class="col-sm-7">
-          <div class="pb-2">28</div>
-        </div>
-        <div class="col-sm-5">
-          <div class="pb-2 fw-bolder">
-            <i
-              class="far fa-envelope pe-2 text-muted"
-              style="width: 24px; opacity: 0.85"
-            ></i>
-            Email
+          <div class="col-sm-7">
+            <div class="pb-2">{{ info.content }}</div>
           </div>
-        </div>
-        <div class="col-sm-7">
-          <div class="pb-2">waltercompany.com</div>
-        </div>
-        <div class="col-sm-5">
-          <div class="pb-2 fw-bolder">
-            <i
-              class="fab fa-skype pe-2 text-muted"
-              style="width: 24px; opacity: 0.85"
-            ></i>
-            Skype
-          </div>
-        </div>
-        <div class="col-sm-7">
-          <div class="pb-2">usernameskype.com</div>
-        </div>
-        <div class="col-sm-5">
-          <div class="pb-2 fw-bolder">
-            <i
-              class="fas fa-phone pe-2 text-muted"
-              style="width: 24px; opacity: 0.85"
-            ></i>
-            Phone
-          </div>
-        </div>
-        <div class="col-sm-7">
-          <div class="pb-2">+0718-111-0011</div>
-        </div>
-        <div class="col-sm-5">
-          <div class="pb-2 fw-bolder">
-            <i
-              class="fas fa-map-marker-alt pe-2 text-muted"
-              style="width: 24px; opacity: 0.85"
-            ></i>
-            Address
-          </div>
-        </div>
-        <div class="col-sm-7">
-          <div class="pb-2">131 W, City Center, New York, U.S.A</div>
-        </div>
+        </ng-template>
       </div>
     </div>
   </div>
