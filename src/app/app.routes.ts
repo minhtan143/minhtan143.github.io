@@ -21,14 +21,14 @@ export const routes: Routes = [
         path: 'experience',
         loadChildren: () =>
           import('./modules/experience/experience.module').then(
-            (x) => x.ExperienceModule
+            (x) => x.ExperienceModule,
           ),
       },
       {
         path: 'contact',
         loadChildren: () =>
           import('./modules/contact/contact.module').then(
-            (x) => x.ContactModule
+            (x) => x.ContactModule,
           ),
       },
     ],

@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private meta: Meta,
-    private readonly ngParticlesService: NgParticlesService
+    private readonly ngParticlesService: NgParticlesService,
   ) {}
 
   ngOnInit(): void {

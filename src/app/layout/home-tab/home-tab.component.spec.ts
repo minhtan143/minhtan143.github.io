@@ -8,10 +8,9 @@ describe('HomeTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HomeTabComponent]
-    })
-    .compileComponents();
-    
+      imports: [HomeTabComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(HomeTabComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

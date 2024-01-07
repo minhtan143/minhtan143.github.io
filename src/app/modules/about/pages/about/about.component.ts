@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.currentYear = new Date().getFullYear();
 
-    this.localDataService.getAbout().subscribe((about) => {
+    this.localDataService.getInformation().subscribe((about) => {
       this.introduce = about.introduce;
 
       this.about = [

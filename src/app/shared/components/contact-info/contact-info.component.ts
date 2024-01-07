@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactModel } from '../../../data/models/contact.model';
 import { LocalDataService } from '../../../data/services/local-data.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +7,7 @@ import {
   faGithub,
   faSkype,
 } from '@fortawesome/free-brands-svg-icons';
+import { ContactModel } from '../../../data/models/information.model';
 
 @Component({
   selector: 'app-contact-info',
@@ -27,7 +27,7 @@ export class ContactInfoComponent implements OnInit {
   constructor(private localDataService: LocalDataService) {}
 
   ngOnInit(): void {
-    this.localDataService.getContact().subscribe((contact) => {
+    this.localDataService.getInformation().subscribe(({ contact }) => {
       this.contact = contact;
     });
   }

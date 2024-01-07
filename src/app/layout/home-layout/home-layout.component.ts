@@ -7,7 +7,12 @@ import { ContactInfoComponent } from '../../shared/components/contact-info/conta
 @Component({
   selector: 'app-home-layout',
   standalone: true,
-  imports: [RouterOutlet, FooterComponent, ContactInfoComponent, HomeTabComponent],
+  imports: [
+    RouterOutlet,
+    FooterComponent,
+    ContactInfoComponent,
+    HomeTabComponent,
+  ],
   templateUrl: './home-layout.component.html',
   styleUrl: './home-layout.component.scss',
 })

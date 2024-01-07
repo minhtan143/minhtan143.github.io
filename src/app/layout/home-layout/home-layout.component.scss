@@ -1,5 +1,5 @@
 .resume-container {
-  >.my-5 {
+  > .my-5 {
     margin: 0 !important;
   }
 }
@@ -16,7 +16,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(2px);
 
-  >img {
+  > img {
     -o-object-fit: cover;
     object-fit: cover;
     width: auto;
