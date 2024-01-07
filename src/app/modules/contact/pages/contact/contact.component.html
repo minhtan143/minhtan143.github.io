@@ -1,0 +1,37 @@
+<div class="contant-section">
+  <h2 class="h2 fw-light text mb-4">Contact</h2>
+  <div class="row my-4">
+    <ng-template ngFor let-contact [ngForOf]="contacts">
+      <div class="col-sm-5 col-lg-4">
+        <div class="pb-2 fw-bolder">
+          <i
+            class="far fa-calendar-alt pe-2 text-muted"
+            style="width: 24px; opacity: 0.85"
+          ></i>
+          {{ contact.title }}
+        </div>
+      </div>
+      <div class="col-sm-7 col-lg-8 offset-1 offset-sm-0">
+        <ng-template [ngIf]="contact.link" [ngIfElse]="normalText">
+          <a [href]="contact.link">{{ contact.content }}</a>
+        </ng-template>
+        <ng-template #normalText>
+          {{ contact.content }}
+        </ng-template>
+      </div>
+    </ng-template>
+  </div>
+  <h2 class="h2 fw-light text mb-4">Location</h2>
+  <div class="row">
+    <div class="d-print-none" data-aos="zoom-in" data-aos-delay="100">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.417881471815!2d106.62856257590641!3d10.855786957723074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175298af1491bff%3A0xcf2251bacb86b0f2!2sTMA%20Solutions%20Lab%206!5e0!3m2!1svi!2s!4v1704643567866!5m2!1svi!2s"
+        width="600"
+        height="450"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</div>

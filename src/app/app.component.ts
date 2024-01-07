@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
         outModes: {
           default: OutMode.bounce,
         },
-        random: true,
+        random: false,
         speed: 1.5,
         straight: false,
       },
@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private meta: Meta,
-    private readonly ngParticlesService: NgParticlesService
+    private readonly ngParticlesService: NgParticlesService,
   ) {}
 
   ngOnInit(): void {

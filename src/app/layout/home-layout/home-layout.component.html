@@ -2,10 +2,14 @@
   <div class="resume-container">
     <div class="bg-white my-5">
       <div class="bg-info text-white">
-        <div class="cover bg-image">
-          <img src="assets/images/header-background.jpg" />
+        <div
+          class="bg-image"
+          style="
+            background-image: url(&quot;assets/images/header-background.jpg&quot;);
+          "
+        >
           <div class="mask">
-            <div class="text-center p-5">
+            <div class="text-center p-4 pt-5">
               <div class="p-1">
                 <img
                   class="img-thumbnail"
@@ -24,7 +28,7 @@
                   data-aos="zoom-in"
                   data-aos-delay="200"
                 >
-                  <app-contact></app-contact>
+                  <app-contact-info></app-contact-info>
                 </div>
               </div>
             </div>
@@ -32,7 +36,7 @@
         </div>
       </div>
     </div>
-    <router-outlet></router-outlet>
+    <app-home-tab></app-home-tab>
   </div>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>

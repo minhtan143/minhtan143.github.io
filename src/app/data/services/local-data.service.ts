@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Contact } from '../models/contact';
+import { InformationModel } from '../models/information.model';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +9,9 @@ import { Contact } from '../models/contact';
 export class LocalDataService {
   constructor(private http: HttpClient) {}
 
-  public getContact(): Observable<Contact> {
-    return this.http.get<Contact>('assets/static-data/contact.json');
+  public getInformation(): Observable<InformationModel> {
+    return this.http.get<InformationModel>(
+      'assets/static-data/information.json',
+    );
   }
 }

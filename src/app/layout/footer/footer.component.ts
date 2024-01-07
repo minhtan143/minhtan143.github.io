@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactComponent } from '../../shared/components/contact/contact.component';
+import { ContactInfoComponent } from '../../shared/components/contact-info/contact-info.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ContactComponent],
+  imports: [ContactInfoComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })

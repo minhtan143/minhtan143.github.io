@@ -1,0 +1,20 @@
+<div class="my-4 my-lg-5">
+  <nav>
+    <div class="nav nav-tabs nav-fill" role="tablist">
+      <button
+        *ngFor="let nav of navs"
+        [routerLink]="nav.link"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link border-start border-end border-top border-white"
+        type="button"
+        role="tab"
+      >
+        {{ nav.title }}
+      </button>
+    </div>
+    <div class="bg-white p-4 p-lg-5">
+      <router-outlet></router-outlet>
+    </div>
+  </nav>
+</div>
