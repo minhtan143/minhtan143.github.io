@@ -7,4 +7,9 @@ export const routes: Routes = [
     component: HomeLayoutComponent,
     title: 'Tan Pham - About me',
   },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
