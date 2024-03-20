@@ -1,0 +1,32 @@
+[
+  {
+    "time": "2024",
+    "role": "Software Developer",
+    "location": "Trustify Technology",
+    "description": "Developed and maintained software applications"
+  },
+  {
+    "time": "2023 - 2024",
+    "role": "DevOps Engineer",
+    "location": "TMA Solutions",
+    "description": "Designed new architectures within Azure/AWS, create and maintained automation CI/CD pipelines for code deployment\nMigrated application system from AWS to Azure App Service\nDeveloped containers, and deployment using Docker and Kubernetes"
+  },
+  {
+    "time": "2021 - 2023",
+    "role": ".NET Developer",
+    "location": "TMA Solutions",
+    "description": "Develop and maintain custom data-centric web applications using ASP.NET, C#.NET, and Services with Agile/SCRUM methodology\nMaintain and implement feature for partner provide new product\nDesigned web pages using HTML, JavaScript, CSS, DHTML, XML and page design and layout and graphics"
+  },
+  {
+    "time": "2021",
+    "role": "Software Developer Intern",
+    "location": "BigIn",
+    "description": "Training API development, building authentication system with IdentityServer4\nTraining uses RESTful API with Single Page Application Frameworks"
+  },
+  {
+    "time": "2017 - 2022",
+    "role": "Developer",
+    "location": "University - HCMUTE",
+    "description": "Learn and develop software development skills\nFully designed and developed database and software\nFully developed applications, completed many subject projects"
+  }
+]

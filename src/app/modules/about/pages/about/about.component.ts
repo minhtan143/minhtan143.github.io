@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LocalDataService } from '../../../../data/services/local-data.service';
+import { InformationModel } from '../../../../data/models/information.model';
 
 @Component({
   selector: 'app-about',
@@ -19,7 +20,7 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.currentYear = new Date().getFullYear();
 
-    this.localDataService.Information.subscribe((about) => {
+    this.localDataService.Information.subscribe((about: InformationModel) => {
       this.introduce = about.introduce;
 
       this.about = [

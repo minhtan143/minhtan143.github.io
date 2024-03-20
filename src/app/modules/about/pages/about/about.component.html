@@ -7,19 +7,21 @@
     <div class="col-md-5 offset-lg-1">
       <div class="row mt-2">
         <h2 class="h2 fw-light mb-4">Bio</h2>
-        <ng-template ngFor let-info [ngForOf]="about">
-          <div class="col-sm-5">
-            <div class="pb-2 fw-bolder">
-              <i
-                class="far fa-calendar-alt pe-2 text-muted"
-                style="width: 24px; opacity: 0.85"
-              ></i>
-              {{ info.title }}
+        <ng-template [ngIf]="about">
+          <ng-template ngFor let-info [ngForOf]="about">
+            <div class="col-sm-5">
+              <div class="pb-2 fw-bolder">
+                <i
+                  class="far fa-calendar-alt pe-2 text-muted"
+                  style="width: 24px; opacity: 0.85"
+                ></i>
+                {{ info.title }}
+              </div>
             </div>
-          </div>
-          <div class="col-sm-7 offset-1 offset-sm-0">
-            <div class="pb-2">{{ info.content }}</div>
-          </div>
+            <div class="col-sm-7 offset-1 offset-sm-0">
+              <div class="pb-2">{{ info.content }}</div>
+            </div>
+          </ng-template>
         </ng-template>
       </div>
     </div>
