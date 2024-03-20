@@ -38,8 +38,8 @@ export class AppComponent implements OnInit {
         enable: true,
         color: '#008000',
         distance: 150,
-        opacity: 0.4,
-        width: 0.6,
+        opacity: 0.3,
+        width: 0.3,
       },
       move: {
         direction: MoveDirection.none,
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
           default: OutMode.bounce,
         },
         random: false,
-        speed: 1.5,
+        speed: 1,
         straight: false,
       },
       number: {
@@ -59,10 +59,10 @@ export class AppComponent implements OnInit {
         value: 100,
       },
       opacity: {
-        value: 0.6,
+        value: 0.5,
       },
       size: {
-        value: { min: 1, max: 1.5 },
+        value: { min: 0.5, max: 0.8 },
       },
     },
     detectRetina: true,

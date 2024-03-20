@@ -1,0 +1,36 @@
+.text-justify {
+    text-align: justify;
+}
+
+.time-tag {
+    color: gray;
+
+    &.active {
+        color: blue;
+        border-color: blue !important;
+    }
+}
+
+.white-space-line {
+    white-space: pre-line;
+}
+
+.card-info {
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        &:nth-child(2n+1) {
+            border-right: rgb(210, 210, 210) solid 1px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        border-right: rgb(210, 210, 210) solid 1px;
+
+        &:nth-child(3n) {
+            border-right: 0;
+        }
+    }
+
+    &:last-child {
+        border-right: 0;
+    }
+}

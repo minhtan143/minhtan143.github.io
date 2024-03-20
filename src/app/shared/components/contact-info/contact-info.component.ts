@@ -7,7 +7,7 @@ import {
   faGithub,
   faSkype,
 } from '@fortawesome/free-brands-svg-icons';
-import { ContactModel } from '../../../data/models/information.model';
+import { ContactModel, InformationModel } from '../../../data/models/information.model';
 
 @Component({
   selector: 'app-contact-info',
@@ -26,8 +26,8 @@ export class ContactInfoComponent implements OnInit {
   constructor(private localDataService: LocalDataService) {}
 
   ngOnInit(): void {
-    this.localDataService.Information.subscribe(({ contact }) => {
-      this.contact = contact;
+    this.localDataService.Information.subscribe((information: InformationModel) => {
+      this.contact = information.contact;
     });
   }
 }
