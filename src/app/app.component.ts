@@ -80,7 +80,7 @@ export class AppComponent implements OnInit {
       { property: 'og:url', content: environment.baseUrl },
       {
         property: 'og:title',
-        content: 'Tan Pham - .NET Developer and DevOps Engineer',
+        content: 'Tan Pham - Software Developer and DevOps Engineer',
       },
       {
         property: 'og:image',
@@ -89,7 +89,7 @@ export class AppComponent implements OnInit {
       { property: 'og:site_name', content: 'Tan Pham' },
       {
         property: 'og:keywords',
-        content: 'TP,Tan Pham,Phạm Văn Minh Tân,.NET Developer,DevOps Engineer',
+        content: 'TP,Tan Pham,Phạm Văn Minh Tân,Software Developer,DevOps Engineer',
       },
       { property: 'og:description', content: this.descriptionMeta },
       { property: 'og:type', content: 'profile' },
