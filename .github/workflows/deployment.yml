@@ -18,17 +18,15 @@ jobs:
           repository: ${{ github.event.client_payload.repository }}
           token: ${{ secrets.PAT_TOKEN }}
           tag: ${{ github.event.client_payload.version }}
-          extract: true
           fileName: ${{ github.event.client_payload.assets }}
-
-      - name: Unzip release
-        run: unzip -q ${{ github.event.client_payload.assets }} -d release
+          out-file-path: release
+          extract: true
 
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3.0.1
         with:
-          path: release
+          path: $GITHUB_WORKSPACE/release
 
   deploy:
     environment:
