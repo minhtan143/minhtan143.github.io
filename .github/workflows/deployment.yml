@@ -1,0 +1,43 @@
+name: Deployment
+
+on:
+  repository_dispatch:
+    types: [deploy-gh-pages]
+
+concurrency:
+  group: "deploy"
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download release
+        uses: robinraju/release-downloader@v1.11
+        with:
+          repository: ${{ github.event.client_payload.repository }}
+          token: ${{ secrets.PAT_TOKEN }}
+          tag: ${{ github.event.client_payload.version }}
+          fileName: ${{ github.event.client_payload.assets }}
+          out-file-path: release
+          extract: true
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
+          path: ${{ github.workspace }}/release
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    needs: prepare
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4.0.5
